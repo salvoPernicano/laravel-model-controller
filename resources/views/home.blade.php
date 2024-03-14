@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite('resources/js/app.js')
-</head>
-<body>
-    <h1>Hello world</h1>
-    <h2> Ciao, {{ $name }}</h2>
-</body>
-</html>
+@extends('layout.app')
+
+@section('main')
+<main>
+    
+        @foreach($movies as $item)
+        <div class="card">
+            <h2>Titolo :  {{$item['title']}} </h2>
+            <h3>Titolo originale: {{$item['original_title']}} </h3>
+            <h4>Nazionalità : {{$item['nationality']}} </h4>
+            <h4>Anno : {{$item['date']}}</h4>
+            <h4>Voto : {{$item['vote']}} </h4>
+        </div>
+        @endforeach
+    
+</main>
+@endsection

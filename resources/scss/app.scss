@@ -1,3 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
-    background-color: aqua;
+    background-color: lightslategray;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .card{
+        text-align: center;
+        flex-basis: calc(100% / 5);
+    }
 }
